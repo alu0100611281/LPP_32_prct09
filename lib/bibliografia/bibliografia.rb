@@ -72,7 +72,36 @@ module Bibliografia
             @isbn.length
         end
 
-      
+        #se incluye el operador del mixin comparable
+    	def <=>(anOther)
+      	autores.size <=> anOther.autores.size
+    	end
+	
+	def ==(anOther)
+      	   if autores.size == anOther.autores.size
+	      return true
+           else #si no son iguales
+	      return false	
+           end
+        end
+    
+       
+    
+        def < (anOther)
+           if numeroedicion.size < anOther.numeroedicion.size
+	     return true
+           else #si no son iguales
+	     return false	
+           end
+        end
+    
+        def >(anOther)
+           if numeroedicion.size > anOther.numeroedicion.size
+	     return true
+           else #si no son iguales
+	     return false	
+           end
+        end
 
     end#end de la clase bibliografia
 
