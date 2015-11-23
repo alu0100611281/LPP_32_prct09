@@ -36,7 +36,21 @@ Bookshelf', '1','(December 25, 2010)', ['ISBN-10: 1934356379.' ,'ISBN-13: 978-19
 	
 			
   end
-	
+	context"Pruebas para bibliografia"do
+		it "Comprueba que el numero de edicion p1 sea mayor que el de  p4" do
+			expect(@p1.numeroedicion > @p4.numeroedicion).to eq(true)
+	    	end
+		it "Comprueba que el numero de edicion p5 sea menor que el de  p1" do
+			expect(@p5.numeroedicion < @p1.numeroedicion).to eq(true)
+	    	end			
+		it "El autor 1 es igual al autor 2" do
+      			expect(@p1.autores == @p2.autores).to eq(true)
+    		end
+		it "El autor 1 es diferente al autor 3" do
+      			expect(@p1.autores == @p3.autores).to eq(false)
+    		end
+		
+	end
 end#fin del describe de bibliografia
 
 describe Bibliografia::Lista do	  
