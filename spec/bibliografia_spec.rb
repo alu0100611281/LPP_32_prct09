@@ -110,24 +110,7 @@ describe Bibliografia::Lista do
                     @lista.push_final(@node2)
                     expect(@lista.cabeza).to eq(@node1)	
 	        end
-	        it "Se puede encontrar un autor" do
-		    @lista.push_final(@node1)
-                    @lista.push_final(@node2)
-		    @lista.push_final(@node5)
-		    @lista.find {|i| i == "Dave Thomas"}
-		end
-		it "Devuelve el minimo" do
-		    @lista.push_final(@node1)
-                    @lista.push_final(@node2)
-		    @lista.push_final(@node5)
-		    expect(@lista.min).to eq(@node5)
-		end
-		it "Devuelve el maximo" do
-		    @lista.push_final(@node1)
-                    @lista.push_final(@node2)
-		    @lista.push_final(@node5)
-		    expect(@lista.max).to eq(@node1)
-		end
+	      
 	
 	  end 
 end#fin del describe de Lista
